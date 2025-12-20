@@ -1,0 +1,19 @@
+mat-card{
+     margin: 0px 50px;
+  padding: 20px;
+}
+
+table{
+    width: 100%;
+}
+
+.heading{
+ padding: 25px 55px;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+th, td{
+     text-align: center;
+  padding: 10px;
+}

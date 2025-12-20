@@ -1,0 +1,38 @@
+.profilebtn{
+        color: white;
+        font-size: 26px;
+        
+    }
+
+
+    button .passwordbtn{
+        
+        margin-right: 10px;
+        color: #a8000a;
+        font-size: 23px;
+    }
+
+    button .logoutbtn{
+        color: #a8000a;
+        font-size: 24px;
+    }
+
+    button{
+    
+        font-family: 'poppins', sans-serif;
+        font-size: 15px;
+    }
+
+    
+    .mymegamenu{
+        
+        align-items: center;
+    }
+    
+
+
+    .txt{
+        padding-bottom: 10px;
+    }
+
+    

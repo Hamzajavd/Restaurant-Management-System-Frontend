@@ -1,0 +1,138 @@
+
+mat-card {
+  margin: 20px 30px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+hr {
+  margin: 20px 0;
+  border: none;
+  border-top: 1px solid #e0e0e0;
+}
+
+
+b span {
+  font-size: 18px;
+  color: #333;
+  font-weight: 600;
+}
+
+button[mat-flat-button] {
+  margin: 10px 10px 0 0;
+  border-radius: 8px;
+  text-transform: none;
+  font-weight: 500;
+}
+
+
+.float-right {
+  float: right;
+}
+
+
+mat-form-field {
+  width: 100%;
+  margin: 10px 0;
+}
+
+@media (min-width: 768px) {
+  mat-form-field {
+    width: calc(50% - 10px);
+    margin-right: 10px;
+  }
+}
+
+.responsive-table {
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background-color: #3f51b5;
+  color: white;
+  font-weight: 500;
+  text-align: left;
+  padding: 12px;
+}
+
+td {
+  padding: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.action-link {
+  text-align: center;
+}
+
+
+.action-link i {
+  color: #e53935;
+  transition: color 0.2s;
+}
+
+.action-link i:hover {
+  color: #c62828;
+}
+
+
+.card {
+  background-color: #fff;
+  margin: 20px 30px;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.buttons{
+  margin: 20px 30px;
+  padding: 20px;
+}
+
+
+mat-card button{
+  
+  background-color: #a8000a;
+  color: #fcfcfc;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+mat-card button:hover{
+  background-color: white;
+  color: #a8000a;
+}
+
+
+@media (max-width: 768px) {
+  mat-form-field {
+    width: 100% !important;
+    margin-right: 0;
+  }
+
+  .float-right {
+    float: none;
+    width: 100%;
+    display: block;
+    margin-top: 10px;
+  }
+
+  button[mat-flat-button] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  th, td {
+    font-size: 14px;
+  }
+}

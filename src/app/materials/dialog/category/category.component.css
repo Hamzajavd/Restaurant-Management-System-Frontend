@@ -1,0 +1,47 @@
+
+
+mat-toolbar{
+    background-color: #a8000a;
+}
+
+mat-toolbar-row{
+    color: white;
+    font-family: 'poppins',sans-serif;
+    font-size: 20px;
+    justify-content: center;
+    text-transform: capitalize;
+
+}
+
+mat-dialog-actions{
+    gap: 15px;
+}
+
+.btn1{
+  background-color: #a8000a;
+  border: none;
+  padding: 15px;
+  color: white;
+  font-size: 15px;
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+
+.btn1:hover{
+    background-color: black;
+}
+
+
+.btn2{
+  background-color: #dad9d9;
+  border: none;
+  padding: 15px;
+  color: rgb(26, 26, 26);
+  font-size: 15px;
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+
+.btn2:hover{
+    background-color: rgb(173, 173, 173);
+}

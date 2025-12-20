@@ -1,0 +1,166 @@
+.position-relative {
+	position: relative;
+}
+
+.add-contact {
+	position: absolute;
+    right: 17px;
+    top: 57px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+  }
+  
+  html {
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  .column {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+  }
+  
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+  }
+  
+  .about-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #474e5d;
+    color: white;
+  }
+  
+  .container {
+    padding: 0 16px;
+  }
+  
+  .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .title {
+    color: black;
+    text-align: center !important;
+  }
+  
+  .button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #e53935;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+  }
+  
+  .button:hover {
+    background-color: #555;
+  }
+
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      padding: 50px 50px;
+      background-color: #f2f2f2;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .heading {
+      font-size: 24px;
+      text-transform: uppercase;
+      margin-bottom: 40px;
+    }
+
+    .heading hr {
+      margin-top: 10px;
+      border: none;
+      height: 2px;
+      background-color: #a80000;
+      width: 100%;
+    }
+
+    #card {
+      padding-left: 80px;
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+      width: 220px;
+      height: 230px;
+      background-color: white;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .container2 {
+      justify-content: center;
+      padding: 12px;
+      width: 100%;
+      height: 25%;
+      background-color: #a80000;
+      display: flex;
+      align-items: center;
+    }
+
+    .container2 h2 {
+      text-transform: uppercase;
+      color: rgb(255, 255, 255);
+      font-size: 15px;
+      letter-spacing: 1px;
+    }
+
+    .container h1 {
+      font-size: 70px;
+      color: #141414;
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    
+     .view-btn {
+      margin-left: 75px;
+      background-color: #a80000;
+      color: white;
+      border: none;
+      width: 70px;
+      height: 30px;
+      border-radius: 6px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .view-btn:hover {
+      background-color: #7a0000;
+    }
+  
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+
+</head>
+
+<body>
+  <div class="heading">
+    <h1>Dashboard</h1>
+    <hr>
+  </div>
+  <div id="card">
+    <div class="container">
+      <div class="container2">
+        <h2>Total Categories:</h2>
+      </div>
+      <h1>{{data?.category}}</h1>
+        <button type="button" class="view-btn" (click)="categoryAction()">View</button>
+    </div>
+    <div class="container">
+      <div class="container2">
+        <h2>Total Products:</h2>
+      </div>
+      <h1>{{data?.product}}</h1>
+      <button class="view-btn"  (click)="productAction()">View</button>
+    </div>
+    <div class="container">
+      <div class="container2">
+        <h2>Total Bills:</h2>
+      </div>
+      <h1>{{data?.bill}}</h1>
+      <button class="view-btn"  (click)="billAction()">View</button>
+    </div>
+  </div>
+</body>
+
+</html>

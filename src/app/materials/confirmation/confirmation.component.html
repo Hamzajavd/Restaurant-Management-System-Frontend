@@ -1,0 +1,71 @@
+<style>
+
+.message {
+  color: white;
+  padding: 30px;
+  background-color: #a8000a;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  text-align: center;
+
+}
+
+mat-dialog-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+button {
+  min-width: 110px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  border: 2px solid white;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+
+button {
+  background-color: white;
+  color: #a8000a;
+}
+
+
+button:not([color="primary"]) {
+  background-color: transparent;
+  color: white;
+}
+
+
+
+button[color="primary"]:hover {
+  background-color: #a8000a;
+  color: white;
+}
+
+button:not([color="primary"]):hover {
+  background-color: rgb(26, 26, 26);
+  color: #ffffff;
+  border: none;
+}
+
+</style>
+
+
+
+
+<mat-dialog-content class="message">
+    <h5>Are you sure to {{details.message}}</h5>
+
+
+
+<mat-dialog-actions align="end">
+    <button mat-raised-button color="primary" (click)="handleChangeAction()">Yes</button>
+     <button mat-raised-button (click)="closeDialog()">No</button>
+</mat-dialog-actions>
+</mat-dialog-content>

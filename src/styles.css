@@ -1,1 +1,69 @@
-/* You can add global styles to this file, and also import other style files */
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+  @media(max-width: 800px) {
+    .responsive_table {
+        overflow-x: auto !important;
+    }
+  
+    .mat-table {
+        min-width:800px;
+    }
+  }
+  
+  .mat-row {
+    height: auto;
+  }
+  
+  .mat-header-cell,.mat-cell {
+    text-align: center !important;
+    padding: 0px 8px 0px 15px !important;
+  }
+
+ /* Error text color */
+.mat-mdc-form-field .mat-mdc-form-field-error {
+  color: #ff0800 !important;  /* custom red */
+}
+
+/* Label turns red when invalid */
+.mat-mdc-form-field.mat-form-field-invalid .mat-mdc-floating-label {
+  color: #ff0800 !important;
+}
+
+/* Outline border (appearance="outline") */
+.mat-mdc-form-field.mat-form-field-invalid .mdc-notched-outline__leading,
+.mat-mdc-form-field.mat-form-field-invalid .mdc-notched-outline__notch,
+.mat-mdc-form-field.mat-form-field-invalid .mdc-notched-outline__trailing {
+  border-color: #ff0800 !important;
+}
+
+/* Fill underline (appearance="fill") */
+.mat-mdc-form-field.mat-form-field-invalid .mdc-line-ripple::after {
+  border-bottom-color: #ff0800 !important;
+}
+
+.green-snackbar .mdc-snackbar__surface {
+  background: #4caf50 !important; 
+  color: #fff !important;
+  font-weight: 500;
+  text-align: center;
+}
+
+
+.error-snackbar .mdc-snackbar__surface{
+  background: black !important;
+  color: white !important;
+}
+
+.green-snackbar {
+  background: black !important;
+  color: white !important;
+}
+
+
+
+
+/* .mat-mdc-snack-bar-container {
+  background-color: #4caf50 !important;
+  color: white !important;
+} */

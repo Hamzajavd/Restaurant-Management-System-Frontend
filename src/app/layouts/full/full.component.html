@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Management System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+
+        header {
+            
+            background-color: #a80000;
+            width: 100%;
+        }
+
+        nav {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 500;
+            color: white;
+        }
+
+        .hamburgur-icon,
+        .user-icon {
+            color: white;
+            font-size: 20px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .hamburgur-icon:hover,
+        .user-icon:hover {
+            background-color: white;
+            color: #a80000;
+        }
+
+        .example-sidenav-container {
+            width: auto;
+            height: 100vh;
+        }
+
+        mat-sidenav {
+            overflow: hidden;
+            height: 100%;
+        }
+
+        
+
+
+        /* .user-menu {
+            display: none;
+            position: absolute;
+            right:0;
+            margin-top: 5px;
+            margin-right: 20px;
+            background: white;
+            color: #333;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 6px;
+            width: 180px;
+            overflow: hidden;
+            z-index: 999;
+        }
+
+        .user-icon:hover .user-menu {
+  display: block;
+} */
+
+
+        /* .user-menu a {
+            font-size: 18px;
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #222222;
+            transition: background 0.3s;
+        }
+
+        .user-menu a:hover {
+            background: #a8000a;
+            color: white;
+        }
+
+        
+        .show-menu {
+            display: block;
+        } */
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="hamburgur-icon">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <div class="logo">
+                Restaurant Management System
+            </div>
+            <app-header></app-header>
+
+            <!-- <button [matMenuTriggerFor]="profile" mat-icon-button class="user-icon m-r-5">
+                <i class="fa-solid fa-user"></i>
+            </button>
+             <app-header></app-header>
+
+            <mat-menu #profile="matMenu" yPosition="above" xPosition="before" class="mymegamenu">
+               
+            </mat-menu> -->
+
+        </nav>
+    </header>
+
+
+    <mat-sidenav-container class="example-sidenav-container">
+        <mat-sidenav #snav id="snav" class="dark-sidebar" [mode]="mobileQuery.matches ? 'side' : 'over'" fixedTopGap="0"
+            [opened]="mobileQuery.matches" [disableClose]="mobileQuery.matches">
+            <app-sidebar></app-sidebar>
+        </mat-sidenav>
+
+        <mat-sidenav-content>
+            <router-outlet></router-outlet>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</body>
+
+</html>
