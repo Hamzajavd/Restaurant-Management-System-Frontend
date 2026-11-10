@@ -9,26 +9,26 @@ import { MatDialogRef } from '@angular/material/dialog';
   styleUrl: './confirmation.component.css'
 })
 export class ConfirmationComponent {
-onEmitSatusChange = new EventEmitter();
-details:any = {};
-constructor(@Inject(MAT_DIALOG_DATA) 
-public dialogData:any,
-public dialogRef: MatDialogRef<ConfirmationComponent>){
+  onEmitSatusChange = new EventEmitter();
+  details: any = {};
+  constructor(@Inject(MAT_DIALOG_DATA)
+  public dialogData: any,
+    public dialogRef: MatDialogRef<ConfirmationComponent>) {
 
-}
-
-ngOnInit(): void{
-  if(this.dialogData){
-    this.details = this.dialogData;  
   }
-}
 
-handleChangeAction(){
-  this.onEmitSatusChange.emit();
-}
+  ngOnInit(): void {
+    if (this.dialogData) {
+      this.details = this.dialogData;
+    }
+  }
 
-closeDialog() {
-  this.dialogRef.close();
-}
+  handleChangeAction() {
+    this.onEmitSatusChange.emit();
+  }
+
+  closeDialog() {
+    this.dialogRef.close();
+  }
 
 }

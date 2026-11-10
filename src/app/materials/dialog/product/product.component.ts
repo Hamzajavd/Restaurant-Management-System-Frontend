@@ -16,9 +16,9 @@ export class ProductComponent implements OnInit {
 
   onAddProducts = new EventEmitter();
   onEditProducts = new EventEmitter();
-  productForm:any = FormGroup;
+  productForm: any = FormGroup;
   dialogAction = "Add";
-  action:any = "Add";
+  action: any = "Add";
   responsemessage: any;
   categories: any = [];
 
@@ -29,11 +29,11 @@ export class ProductComponent implements OnInit {
     public dialogRef: MatDialogRef<ProductComponent>,
     private categoryService: CategoryService,
     private snackbarService: SnackbarService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.productForm = this.formBuilder.group({
-      name: ['',[Validators.required, Validators.pattern(globalConstraint.nameRegex)]],
+      name: ['', [Validators.required, Validators.pattern(globalConstraint.nameRegex)]],
       categoryId: ['', [Validators.required]],
       description: [''],
       price: ['', Validators.required],
@@ -43,7 +43,7 @@ export class ProductComponent implements OnInit {
       this.dialogAction = "Edit";
       this.action = 'Update';
       this.productForm.patchValue(this.dialogData.data);
-      
+
     }
 
     this.getCategorys();
@@ -54,15 +54,15 @@ export class ProductComponent implements OnInit {
       next: (response: any) => {
         this.categories = response;
       },
-      error: (error: any) => {  
-        if(error.error?.message){
+      error: (error: any) => {
+        if (error.error?.message) {
           this.responsemessage = error.error?.message
         }
-        else{
+        else {
           this.responsemessage = globalConstraint.genericError
         }
 
-        this.snackbarService.openSnackBar(this.responsemessage,globalConstraint.error)
+        this.snackbarService.openSnackBar(this.responsemessage, globalConstraint.error)
       }
     });
   }
@@ -78,12 +78,17 @@ export class ProductComponent implements OnInit {
   add() {
     const formData = this.productForm.value;
     const data = {
-      name: formData.name,
+      name: formData.name.trim(),
       categoryId: Number(formData.categoryId),
-      description: formData.description,
-      price: Number(formData.price),
+      description: formData.description.trim(),
+      price: Number(formData.price.trim()),
     };
 
+
+    if (!data.name || !data.description) {
+      this.snackbarService.openSnackBar("Please enter a valid Product details", "error");
+      return;
+    }
     this.productService.add(data).subscribe({
       next: (response: any) => {
         this.dialogRef.close();
@@ -103,11 +108,16 @@ export class ProductComponent implements OnInit {
     const formData = this.productForm.value;
     const data = {
       id: this.dialogData.data.id,
-      name: formData.name,
-      categoryId: formData.categoryId,
-      price: formData.price,
-      description: formData.description,
+      name: formData.name.trim(),
+      categoryId: formData.categoryId.trim(),
+      price: formData.price.trim(),
+      description: formData.description.trip(),
     };
+
+    if (!data.name || !data.description || !data.price || !data.categoryId) {
+      this.snackbarService.openSnackBar("Please enter a valid Product details", "error");
+      return;
+    }
 
     this.productService.update(data).subscribe({
       next: (response: any) => {

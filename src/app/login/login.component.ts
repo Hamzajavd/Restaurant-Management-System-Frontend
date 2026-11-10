@@ -35,12 +35,19 @@ export class LoginComponent {
   }
 
   handleSubmit() {
-    this.ngxService.start();
+    
     const formData = this.loginForm.value;
     let data = {
-      email: formData.email,
-      password: formData.password
+      email: formData.email?.trim() || '',
+      password: formData.password?.trim() || ''
     }
+
+
+  if(!data.email || !data.password){
+    this.snackbarService.openSnackBar("Please enter a valid login details", "error");
+    return
+  }
+this.ngxService.start();
     this.userService.login(data).subscribe({
       next: (response: any) => {
         this.ngxService.stop();

@@ -39,10 +39,16 @@ export class SignupComponent {
     this.ngxService.start();
     var formData = this.signupForm.value;
     let data = {
-      name: formData.name,
-      email: formData.email,
-      contactNumber: formData.contactNumber,
-      password: formData.password
+      name: formData.name.trim(),
+      email: formData.email.trim(),
+      contactNumber: formData.contactNumber.trim(),
+      password: formData.password.trim()
+    }
+
+    if (!data.email || !data.password || !data.name || !data.contactNumber) {
+      this.snackBarService.openSnackBar("Please enter a valid signup details", "error");
+      this.ngxService.stop();
+      return
     }
 
     this.userService.signup(data).subscribe({
@@ -64,7 +70,7 @@ export class SignupComponent {
         this.snackBarService.openSnackBar(this.responseMessage, globalConstraint.error);
       },
       complete: () => {
-        // optional, only if you need to run code after observable finishes
+
       }
     })
   }
